@@ -1,9 +1,21 @@
-'use client'
+
 import React from 'react'
 
-export default function UsersPage() {
+interface User{
+    id:number
+    name:string
+    email:string
+    username:string
+}
+export default async function UsersPage() {
+    const res = await fetch('https://jsonplaceholder.typicode.com/users');
+    const user: User[] = await res.json();
+
+
   return (
-    <div>UsersPage</div>
+   <>
+   <h1>Users</h1>
+   </>
 
   )
 }
