@@ -15,6 +15,9 @@ export default async function UsersPage() {
   return (
    <>
    <h1>Users</h1>
+   <ul>
+    {user.map(user => <li key={user.id}>{user.name}</li>)}
+   </ul>
    </>
 
   )
